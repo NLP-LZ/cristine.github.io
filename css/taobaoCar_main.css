@@ -1,0 +1,365 @@
+aside{
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    width: 60px;
+    height: 130px;
+    padding: 26px 0;
+    text-align: center;
+    background-color: white;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+aside img{
+    display: block;
+    margin: 0 auto;
+}
+aside a{
+    font-size: 12px;
+    color: black;
+}
+aside .cellphone{
+    width: 50px;
+    height: 50px;
+    padding-bottom: 15px;
+}
+
+aside .cellphone:hover .side_QRcode{
+    display: block;
+}
+
+aside .cellphone{
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    padding-top: 15px;
+}
+
+aside .cellphone .side_QRcode{
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 65px;
+    width: 125px;
+    height: 125px;
+    text-align: center;
+    padding-top: 15px;
+    background-color: white;
+    border-radius: 15px;
+    display: none;
+}
+
+/*主体盒子*/
+main{
+    width: 1190px;
+    margin: 25px auto 0;
+    border-radius: 24px;
+    overflow: hidden;
+}
+/*主体-购物车标题栏*/
+main .tb_main_title{
+    position: relative;
+    height: 72px;
+    line-height: 72px;
+    background-color: white;
+    border-bottom: 1px solid #EAE8EB;
+    padding: 0 20px;
+    display: flex;
+}
+main .tb_main_title span{
+    font-size: 18px;
+    font-weight: bolder;
+}
+main .tb_main_title .cart-sum{
+    position: absolute;
+    right: 20px;
+}
+main .tb_main_title .cart-sum span{
+    font-size: 15px;
+    font-weight: normal;
+}
+main .tb_main_title .cart-sum span.sum_prices{
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0 15px;
+    font-size: 22px;
+    color: #FF4400;
+    font-weight: bolder;
+}
+main .tb_main_title .cart-sum input{
+    width: 75px;
+    height: 43px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 23px;
+    background-color: #AAAAAA;
+    cursor: not-allowed;
+    /*要等到总费用不等于0时，按钮变色，禁用取消，这个要用js实现*/
+    /*background: linear-gradient(to right,#FF9000,#FF4400);*/
+    /*cursor: pointer;*/
+}
+
+/*商品信息标题栏*/
+.tb_main_selector{
+    height: 50px;
+    background-color: white;
+}
+.tb_main_selector .tb_main_selector_inner{
+    display: flex;
+}
+.tb_main_selector .tb_main_selector_inner li{
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-weight: bold;
+}
+.tb_main_selector .tb_main_selector_inner .inner_selected{
+    width: 100px;
+}
+.tb_main_selector .tb_main_selector_inner .inner_selected input{
+    width: 15px;
+    height: 15px;
+    border: 1px solid #eeeeee;
+    margin-left: 25px;
+}
+.tb_main_selector .tb_main_selector_inner .inner_info{
+    width: 305px;
+}
+.tb_main_selector .tb_main_selector_inner .inner_classify{
+    width: 210px;
+}
+.tb_main_selector .tb_main_selector_inner .inner_amount{
+    width: 130px;
+}
+.tb_main_selector .tb_main_selector_inner .inner_number{
+    width: 120px;
+ }
+.tb_main_selector .tb_main_selector_inner .inner_prices{
+    width: 140px;
+  }
+.tb_main_selector .tb_main_selector_inner .inner_handle{
+    width: 150px;
+}
+
+
+
+/*主体内容盒子*/
+.tb_main_content{
+    /*height: 3000px;*/
+    padding-bottom: 30px;
+    /*可以用js获取当前视口高度，使其成为最小高度*/
+    min-height: 600px;
+    background-color: white;
+}
+/*单独的商品信息盒子*/
+.tb_main_content .tb_main_content_items{
+    height: 158px;
+}
+/*商铺名称栏*/
+.tb_main_content .tb_main_content_items .items_title{
+    height: 38px;
+    line-height: 38px;
+    background-color: white;
+    font-size: 13px;
+    position: relative;
+}
+.tb_main_content .tb_main_content_items .items_title>input{
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #eeeeee;
+    margin-left: 20px;
+    margin-top: 11px;
+    vertical-align: bottom;
+}
+.tb_main_content .tb_main_content_items .items_title #shop{
+    position: absolute;
+    left: 40px;
+}
+.tb_main_content .tb_main_content_items .items_title #shop_name{
+    position: absolute;
+    left: 80px;
+}
+/*商品信息主体*/
+.tb_main_content .tb_main_content_items .items_content{
+    height: 120px;
+    width: 1142px;
+    border-radius: 20px;
+    margin: 0 auto;
+    background-color: #F5F5F5;
+    /*被选中时，出现边框，背景变色*/
+    /*border: 1px solid #FF4400;*/
+    /*background-color: #FFF9F6;*/
+}
+.tb_main_content .tb_main_content_items .items_content .items_inner{
+    position: relative;
+}
+.tb_main_content .tb_main_content_items .items_content .items_inner .items_checkbox{
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+.tb_main_content .tb_main_content_items .items_content .items_inner #items_info{
+    position: absolute;
+    left: 50px;
+    top: 20px;
+}
+.tb_main_content .tb_main_content_items .items_content .items_inner #items_info #items_information{
+    display: flex;
+}
+.tb_main_content .tb_main_content_items .items_content .items_inner #items_info #items_information img{
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+}
+.tb_main_content .tb_main_content_items .items_content .items_inner #items_info #items_information p a{
+    padding: 0 10px;
+    font-size: 13px;
+    color: #000;
+    width: 239px;
+    height: 36px;
+    /*超出的部分隐藏*/
+    overflow: hidden;
+    /*文字用省略号替代超出的部分*/
+    text-overflow: ellipsis;
+    /*弹性伸缩盒子模型显示*/
+    display: -webkit-box;
+    /*限制在一个块元素显示的文本的行数*/
+    -webkit-line-clamp: 2;
+    /*设置或检索伸缩盒子对象的子元素的排列方式*/
+    -webkit-box-orient: vertical;
+}
+.tb_main_content .tb_main_content_items .items_content .items_inner #items_info #items_information .placeholder,.icons{
+    height: 26px;
+}
+.tb_main_content .tb_main_content_items .items_content .items_inner #items_info #items_information .items_information_right img{
+    display: inline-block;
+    width: 16px;
+    height: 11px;
+}
+.tb_main_content .tb_main_content_items .items_content .items_inner #items_info #items_information .icons{
+    margin:  0 10px;
+}
+.tb_main_content .tb_main_content_items .items_content .items_inner #items_classify{
+    position: absolute;
+    left: 380px;
+    width: 212px;
+    height: 120px;
+}
+.tb_main_content .tb_main_content_items .items_content .items_inner #items_classify .classify-content{
+    padding: 30px 20px;
+}
+.tb_main_content .tb_main_content_items .items_content .items_inner #items_classify .classify-content span{
+    color: #FF4400;
+}
+.tb_main_content .tb_main_content_items .items_content .items_inner #items_classify .classify-content p{
+    color: #6C6C6C;
+    display: inline;
+    /*超出的部分隐藏*/
+    overflow: hidden;
+    /*文字用省略号替代超出的部分*/
+    text-overflow: ellipsis;
+    /*弹性伸缩盒子模型显示*/
+    display: -webkit-box;
+    /*限制在一个块元素显示的文本的行数*/
+    -webkit-line-clamp: 2;
+    /*设置或检索伸缩盒子对象的子元素的排列方式*/
+    -webkit-box-orient: vertical;
+}
+.tb_main_content .tb_main_content_items .items_content .items_inner #items_prices{
+    position: absolute;
+    left: 592px;
+    width: 130px;
+    height: 120px;
+}
+.tb_main_content .tb_main_content_items .items_content .items_inner #items_prices .prices-content{
+    height: 40px;
+    margin: 40px auto;
+}
+.tb_main_content .tb_main_content_items .items_content .items_inner #items_prices .prices-content .prices-old,.prices-new{
+    width: 100%;
+    height: 20px;
+    text-align: center;
+}
+.tb_main_content .tb_main_content_items .items_content .items_inner #items_prices .prices-content .prices-old,.prices-new em{
+    font-weight: bold;
+}
+.tb_main_content .tb_main_content_items .items_content .items_inner #items_prices .prices-content .prices-old{
+    color: #6C6C6C;
+    text-decoration-line: line-through;
+}
+.tb_main_content .tb_main_content_items .items_content .items_inner #items_amounts{
+    display: flex;
+    position: absolute;
+    left: 722px;
+    width: 120px;
+    height: 120px;
+}
+.tb_main_content .tb_main_content_items .items_content .items_inner #items_amounts .amounts-content{
+    width: 120px;
+    height: 120px;
+}
+.tb_main_content .tb_main_content_items .items_content .items_inner #items_amounts .amounts-content .amounts-inner{
+    position: relative;
+    width: 80px;
+    height: 25px;
+    margin: 47px auto;
+}
+.tb_main_content .tb_main_content_items .items_content .items_inner #items_amounts a{
+    position: absolute;
+    display: inline-block;
+    width: 19px;
+    height: 27px;
+    line-height: 25px;
+    border: 1px solid #ccc;
+    text-align: center;
+    color: #6C6C6C;
+}
+.tb_main_content .tb_main_content_items .items_content .items_inner #items_amounts input{
+    position: absolute;
+    width: 41px;
+    height: 25px;
+    line-height: 25px;
+    border: 1px solid #ccc;
+    left: 21px;
+    text-align: center;
+}
+.tb_main_content .tb_main_content_items .items_content .items_inner #items_amounts a.Plus{
+    left: 68px;
+}
+.tb_main_content .tb_main_content_items .items_content .items_inner #items_sum-number{
+    position: absolute;
+    left: 842px;
+    width: 140px;
+    height: 120px;
+    line-height: 120px;
+    text-align: center;
+}
+.tb_main_content .tb_main_content_items .items_content .items_inner #items_sum-number span{
+    color: #FF4400;
+    font-weight: bold;
+    display: inline-block;
+}
+.tb_main_content .tb_main_content_items .items_content .items_inner #items_handle{
+    position: absolute;
+    left: 982px;
+    width: 80px;
+    height: 120px;
+    line-height: 20px;
+    margin-left: 30px;
+    padding-left: 15px;
+}
+.tb_main_content .tb_main_content_items .items_content .items_inner #items_handle .handle_fav{
+    margin-top: 40px;
+}
+.tb_main_content .tb_main_content_items .items_content .items_inner #items_handle a{
+    color: black;
+    font-size: 13px;
+}
+.tb_main_content .tb_main_content_items .items_content .items_inner #items_handle a:hover{
+    color: #FF4400;
+}

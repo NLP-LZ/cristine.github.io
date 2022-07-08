@@ -1,0 +1,278 @@
+body{
+    position: relative;
+    background-color: #EAE8EB;
+}
+
+header{
+    height:115px;
+    background-color: white;
+}
+
+/*顶部导航条*/
+header .tb_navbar{
+    height: 35px;
+    background-color: #F5F5F5;
+}
+
+/*顶部导航条的内部盒子*/
+header .tb_navbar .tb_navbar_inner{
+    width: 1190px;
+    height: 100%;
+    line-height: 35px;
+    margin: 0 auto;
+    display: flex;
+    position: relative;
+}
+
+/*顶部导航条的超链接*/
+.tb_navbar_inner a{
+    color: #6C6C6C;
+    font-size: 12px;
+}
+.tb_navbar_inner a:hover{
+    color: #FF4400;
+}
+.tb_navbar_inner ul{
+    display: flex;
+}
+.tb_navbar_inner .tb_navbar_inner_left span{
+    display: inline-block;
+    height: 35px;
+    line-height: 35px;
+    margin: 0 10px;
+}
+.tb_navbar_inner .tb_navbar_inner_left ul li{
+    display: inline-block;
+    width: 79px;
+    margin: 0 20px;
+}
+/*不要用 .tb_navbar_inner .tb_navbar_inner_left 。nav_left ,这个优先级会降低，影响其他元素布局*/
+.tb_navbar_inner #username{
+    display: inline-block;
+    width: 129px;
+    position: relative;
+    text-align: center;
+}
+.tb_navbar_inner #username:hover{
+    width: 127px;
+    height: 36px;
+    background-color: white;
+    border: 1px solid #eee;
+    border-top: none;
+    border-bottom: none;
+    float: left;
+    position: relative;
+    z-index: 11;
+}
+/*鼠标放在username上，下面出现用户的个人信息页小盒子*/
+.tb_navbar_inner #username:hover .tb_navbar_manage{
+    display: block;
+    float: left;
+}
+.tb_navbar_inner .tb_navbar_inner_left .left_nav .tb_navbar_manage .message_top{
+    display: flex;
+    position: relative;
+}
+.tb_navbar_inner .tb_navbar_inner_left .left_nav .tb_navbar_manage .message_top .icon{
+    margin: 0 9px;
+    padding: 9px;
+}
+.tb_navbar_inner .tb_navbar_inner_left .left_nav .tb_navbar_manage .message_top .icon img{
+    width: 56px;
+    border-radius: 50%;
+}
+.tb_navbar_inner .tb_navbar_inner_left .left_nav .tb_navbar_manage .message_top #account{
+    position: absolute;
+    right: 10px;
+}
+.tb_navbar_inner .tb_navbar_inner_left .left_nav .tb_navbar_manage .message_top #tq_value{
+    position: absolute;
+    top:15px;
+    font-size: 12px;
+}
+.tb_navbar_inner .tb_navbar_inner_left .left_nav .tb_navbar_manage .message_top #vip{
+    position: absolute;
+    top:35px;
+    font-size: 12px;
+}
+.tb_navbar_inner .tb_navbar_inner_left .left_nav .tb_navbar_manage .message_bottom input{
+    width: 100%;
+    height: 25px;
+    line-height: 17px;
+    padding: 4px 0;
+    border: 1px solid #FFE8DE;
+    background-color: #FFF0E8;
+}
+.tb_navbar_inner .tb_navbar_inner_left .left_nav .tb_navbar_manage .message_bottom input:hover{
+    color: #FF4400;
+}
+.tb_navbar_inner .tb_navbar_inner_left .left_nav .tb_navbar_login .username_message{
+    float: left;
+    height: 35px;
+    line-height: 35px;
+    display: flex;
+    margin-left: 6px;
+    text-align: center;
+}
+.tb_navbar_inner .tb_navbar_inner_left .left_nav .tb_navbar_login .username_message a{
+    display: inline-block;
+    width:98px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.tb_navbar_inner .tb_navbar_inner_left .left_nav .tb_navbar_login .username_message span{
+    margin: 0 10px;
+}
+/*鼠标放在用户名上出现的会员管理小页面*/
+.tb_navbar_inner #username .tb_navbar_manage{
+    display: none;
+    position: absolute;
+    left: -1px;
+    width: 266px;
+    height: 123px;
+    background-color: white;
+    border: 1px solid #eee;
+    /*margin-top: 0;*/
+    border-top: none;
+    padding: 8px;
+}
+
+/*右边的八个li标签*/
+.tb_navbar_inner .tb_navbar_inner_right{
+    position: absolute;
+    left: 550px;
+}
+.tb_navbar_inner .tb_navbar_inner_right li{
+    /*display: block;*/
+    /*margin: 0 15px;*/
+    position: relative;
+}
+.tb_navbar_inner .tb_navbar_inner_right li div{
+    height: 35px;
+    margin: 0 8px;
+}
+.tb_navbar_inner .tb_navbar_inner_right #car:hover .car_icon{
+    color: #FF4400;
+}
+.tb_navbar_inner .tb_navbar_inner_right #mine_tb:hover{
+    background-color: white;
+}
+.tb_navbar_inner .tb_navbar_inner_right #collect:hover{
+    background-color: white;
+}
+.tb_navbar_inner .tb_navbar_inner_right #seller:hover{
+    background-color: white;
+}
+.tb_navbar_inner .tb_navbar_inner_right #service:hover{
+    background-color: white;
+}
+.tb_navbar_inner .tb_navbar_inner_right #collect:hover .star_icon{
+    color: #FF4400;
+}
+
+/*顶部logo-搜索栏*/
+header .tb_header{
+    height: 80px;
+    margin: 0 auto;
+    background-color: white;
+    border: 1px solid #EAE8EB;
+}
+/*顶部logo-搜索栏的内部盒子*/
+header .tb_header .tb_header_inner{
+    width: 1190px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    position: relative;
+}
+/*顶部logo-搜索栏的logo标志盒子*/
+.tb_header .tb_header_inner a .logo{
+    display: block;
+    width: 142px;
+    padding-top: 58px;
+    margin-left: -26px;
+    margin-top: 11px;
+    background-image: url("../img/taobao_logo.png");
+    background-repeat: no-repeat;
+    background-size: 142px 58px;
+}
+.tb_header .tb_header_inner .search{
+    display: flex;
+    width: 424px;
+    height: 45px;
+    border-radius: 23px;
+    position: relative;
+    margin-top: 17px;
+    margin-left: 650px;
+}
+.tb_header .tb_header_inner .search .search-triggers{
+    width: 104px;
+    height: 45px;
+}
+.tb_header .tb_header_inner .search .search-triggers:hover ul li:first-child{
+    border-bottom-left-radius: 0;
+}
+.tb_header .tb_header_inner .search .search-triggers:hover ul li:not(:first-child){
+    display: block;
+}
+.tb_header .tb_header_inner .search .search-triggers ul{
+
+}
+.tb_header .tb_header_inner .search .search-triggers ul li{
+    list-style: none;
+    display: block;
+    width: 104px;
+    height: 45px;
+    line-height: 43px;
+    text-align: center;
+    background-color: #F5F5F5;
+}
+.tb_header .tb_header_inner .search .search-triggers ul li a{
+    color: #000;
+    text-decoration: none;
+    font-size:13px
+}
+.tb_header .tb_header_inner .search .search-triggers ul li:first-child{
+    border-top-left-radius: 23px;
+    border-bottom-left-radius: 23px;
+}
+.tb_header .tb_header_inner .search .search-triggers ul li:not(:first-child){
+    display: none;
+}
+.tb_header .tb_header_inner .search .search-triggers ul li:not(:first-child):hover{
+    background-color: white;
+}
+.tb_header .tb_header_inner .search .search-triggers ul li:not(:first-child):hover a{
+    color: #FF4400;
+}
+.tb_header .tb_header_inner .search .search-panel{
+    width: 320px;
+    background-color: #EBEBEB;
+    position: absolute;
+    left: 103px;
+    border-top-right-radius: 23px;
+    border-bottom-right-radius: 23px;
+}
+.tb_header .tb_header_inner .search .search-panel form{
+    display: flex;
+}
+.tb_header .tb_header_inner .search .search-panel form input{
+    width: 236px;
+    height: 43px;
+    background-color: #EBEBEB;
+    border: 0;
+    outline: none;
+}
+.tb_header .tb_header_inner .search .search-panel form button{
+    width: 80px;
+    height: 100%;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 23px;
+    background: linear-gradient(to right,#FF9000,#FF4400);
+}
+
+

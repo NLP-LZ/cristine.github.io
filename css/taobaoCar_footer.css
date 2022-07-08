@@ -1,0 +1,94 @@
+/*底部结算栏*/
+footer{
+    height:72px;
+    line-height: 72px;
+    width: 1190px;
+    background-color: white;
+    border: 1px solid #EAE8EB;
+    position:fixed;
+    bottom:0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+footer .footer-left{
+    display: flex;
+    width: 250px;
+    padding: 0 20px;
+}
+footer .footer-left a{
+    color: #000;
+    font-size: 14px;
+}
+footer .footer-left a:hover{
+    color: #FF4400;
+}
+footer .footer-left>div{
+    padding: 0 10px;
+    font-size: 14px;
+}
+footer .footer-left .footer-selector input{
+    width: 15px;
+    height: 15px;
+}
+
+footer .footer-right{
+    display: flex;
+    width: 500px;
+    padding: 0 20px;
+    position: absolute;
+    right: 0;
+    font-size: 14px;
+}
+
+footer .footer-right .container:hover{
+    cursor: pointer;
+}
+
+footer .footer-right .container .item-number{
+    font-size: 22px;
+    color: #FF4400;
+    font-weight: bolder;
+    vertical-align: middle;
+}
+
+footer .footer-right .container .iconfont{
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background-image: url(../img/up.png);
+}
+
+footer .footer-right .container:active .iconfont{
+    background-image: url(../img/down.png);
+}
+
+footer .footer-right .sum_prices{
+    font-size: 22px;
+    color: #FF4400;
+    font-weight: bolder;
+    vertical-align: middle;
+    position: absolute;
+    right: 120px;
+    margin-left: 20px;
+}
+
+footer .footer-right .submit_btn{
+    width: 75px;
+    height: 42px;
+    margin-top: 15px;
+    margin-left: 20px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 23px;
+    position: absolute;
+    right: 20px;
+    background-color: #AAAAAA;
+    cursor: not-allowed;
+    /*要等到总费用不等于0时，按钮变色，禁用取消，这个要用js实现*/
+    /*background: linear-gradient(to right,#FF9000,#FF4400);*/
+    /*cursor: pointer;*/
+}
