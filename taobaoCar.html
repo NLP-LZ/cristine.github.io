@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>淘宝网-我的购物车</title>
+    <link rel="stylesheet" href="./css/reset.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="css/taobaoCar_header.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="css/taobaoCar_main.css" type="text/css" media="all">
+    <link rel="stylesheet" href="css/taobaoCar_footer.css" type="text/css" media="all">
+    <link rel="stylesheet" href="./font/iconfont.css" type="text/css" media="all" />
+    <script src="./js/taobaoCar.js" type="text/javascript"></script>
+</head>
+<body>
+    <header>
+        <!--顶部导航条-->
+        <div id="J_NavList" class="tb_navbar">
+            <div class="tb_navbar_inner">
+                <ul class="tb_navbar_inner_left">
+                    <!--用户登录-->
+                    <li id="username" class="left_nav">
+                        <div class="username_message">
+                            <a href="#">Cristine_LZ</a>
+                            <span class="iconfont">&#xe603;</span>
+                        </div>
+                        <div class="tb_navbar_manage">
+                            <div class="message_top">
+                                <div class="icon">
+                                    <img src="./img/taobao_touxiang.jpg" alt="头像">
+                                </div>
+                                <div class="message">
+                                    <p id="account"><a>账号管理</a> | <a>退出</a></p>
+                                    <p id="tq_value">淘气值：698</p>
+                                    <p id="vip">普通会员</p>
+                                </div>
+                            </div>
+                            <div class="message_bottom">
+                                <input type="button" class="btn" value="查看你的专属权益">
+                            </div>
+                        </div>
+                    </li>
+                    <!--手机逛淘宝-->
+                    <li id="mobile" class="left_nav">
+                        <a href="#">
+                            <div class="tb_navbar_mobile">
+                                <span>手机逛淘宝</span>
+                            </div>
+                        </a>
+                    </li>
+                    <!--网页无障碍-->
+                    <li id="website" class="left_nav">
+                        <a href="#">
+                            <div class="tb_navbar_website">
+                                <span>网页无障碍</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="tb_navbar_inner_right">
+                        <li id="index" class="right_nav">
+                            <div class="right_nav_index">
+                                <span><a href="#">淘宝网首页</a></span>
+                            </div>
+                        </li>
+                        <li id="mine_tb" class="right_nav">
+                            <div class="right_nav_mine">
+                                <span><a href="#">我的淘宝</a></span>
+                                <span class="iconfont">&#xe603;</span>
+                            </div>
+                        </li>
+                        <li id="car" class="right_nav">
+                            <div class="right_nav_acr">
+                                <span class="iconfont car_icon">&#xe73c;</span>
+                                <span><a href="#">购物车</a></span>
+                            </div>
+                        </li>
+                        <li id="collect" class="right_nav">
+                            <div class="right_nav_collect">
+                                <span class="iconfont star_icon">&#xe600;</span>
+                                <span><a href="#">收藏夹</a></span>
+                                <span class="iconfont">&#xe603;</span>
+                            </div>
+                        </li>
+                        <li id="classify" class="right_nav">
+                            <div class="right_nav_classify">
+                                <span><a href="#">商品分类</a></span>
+                            </div>
+                        </li>
+                        <li id="free" class="right_nav">
+                            <div class="right_nav_free">
+                                <span><a href="#">免费开店</a></span>
+                            </div>
+                        </li>
+                        <li id="seller" class="right_nav">
+                            <div class="right_nav_seller">
+                                <span><a href="#">牛牛卖家中心</a></span>
+                                <span class="iconfont">&#xe603;</span>
+                            </div>
+                        </li>
+                        <li id="service" class="right_nav">
+                            <div class="right_nav_services">
+                                <span><a href="#">联系客服</a></span>
+                                <span class="iconfont">&#xe603;</span>
+                            </div>
+                        </li>
+                </ul>
+            </div>
+        </div>
+        <!--顶部搜索栏-->
+        <div id="J_Header" class="tb_header">
+                <div class="tb_header_inner">
+                    <a href="#"><div class="logo"></div></a>
+                    <div class="search" id="Search" role="search">
+                        <div class="search-triggers">
+                            <ul class="switchable-nav" id="SearchTab">
+                                <li class="SearchTab selected" data-searchtype="item">
+                                    <a href="">宝贝</a>
+                                </li>
+                                <li class="SearchTab" data-searchtype="mall" data-action="">
+                                    <a href="">天猫</a>
+                                </li>
+                                <li class="SearchTab" data-searchtype="shop" data-action="">
+                                    <a href="">店铺</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="search-panel">
+                            <form action="" name="search" id="TSearchForm" class="">
+                                <div class="search-common-panel">
+                                    <div class="search-combobox">
+                                        <div class="search-combobox-input-wrap">
+                                            <input aria-label="请输入搜索文字" autofocus="true" autocomplete="off" class="search-combobox-input" >
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="search-button">
+                                    <button class="btn-search" type="submit">搜索</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </header>
+    <aside class="sidebar">
+        <div class="cellphone">
+            <a href="#">
+                <img src="img/qr_code.png" alt="" />
+                <span>手机购买</span>
+            </a>
+            <div class="side_QRcode">
+                <img src="./img/QRcode.png" alt="手机二维码" />
+                <p style="font-size: 12px">扫一扫，去手机购买</p>
+            </div>
+        </div>
+
+        <div class="feedback">
+            <a href="#">
+                <img src="img/feedback.png" alt="" />
+                <span>反馈</span>
+            </a>
+        </div>
+    </aside>
+
+    <main>
+        <!--主体标题栏-->
+        <div id="main_title" class="tb_main_title">
+            <span class="shop_name">购物车（全部1）</span>
+            <div class="cart-sum">
+                <span class="pay-text">已选商品（不含运费）</span>
+                <strong class="price"><span class="sum_prices">0.00</span></strong>
+                <input type="submit" value="结算" class="submit_btn">
+            </div>
+        </div>
+        <!--主体商品信息表头-->
+        <div id="main_selector" class="tb_main_selector">
+            <ul class="tb_main_selector_inner">
+                <li class="inner_selected">
+                    <input type="checkbox" name="" id="top_selector">
+                    全选
+                </li>
+                <li class="inner_info">
+                    商品信息
+                </li>
+                <li class="inner_classify"></li>
+                <li class="inner_amount">
+                    单价
+                </li>
+                <li class="inner_number">
+                    数量
+                </li>
+                <li class="inner_prices">
+                    金额
+                </li>
+                <li class="inner_handle">
+                    操作
+                </li>
+            </ul>
+        </div>
+        <!--主体商品信息-->
+        <div id="main_content" class="tb_main_content">
+            <!--主体商品信息-->
+            <div id="main_content_items" class="tb_main_content_items">
+                <div class="items_title">
+                    <input type="checkbox" id="shop_select">
+                    <label for="shop_select"></label>
+                    <span id="shop">店铺：</span><span id="shop_name">xxxix</span>
+                </div>
+                <div class="items_content">
+                    <ul class="items_inner">
+                        <li class="items_checkbox">
+                            <input type="checkbox" id="items_check_box">
+                            <label for="items_check_box"></label>
+                        </li>
+                        <li id="items_info">
+                            <div id="items_information">
+                                <img src="./img/items1.jpg" alt="商品首图">
+                                <div class="items_information_right">
+                                    <p><a href="#">扇子男生霸气中国风古装复古大号折叠扇随身汉服配饰古风折扇扇子男生霸气中国风古装复古大号折叠扇随身汉服配饰古风折扇</a></p>
+                                    <div class="placeholder"></div>
+                                    <div class="icons">
+                                        <img src="img/icon1.png" alt="">
+                                        <img src="img/icon2.jpg" alt="">
+                                        <img src="img/icon3.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li id="items_classify">
+                            <div class="classify-content">
+                                <span id="classify-name">颜色分类：</span>
+                                <p id="classify-description">10存且试天下+流苏10存且试天下+流苏10存且试天下+流苏</p>
+                            </div>
+                        </li>
+                        <li id="items_prices">
+                            <div class="prices-content">
+                                <div class="prices-old"><span>￥</span><em>49</em></div>
+                                <div class="prices-new"><span>￥</span><em>25.6</em></div>
+                            </div>
+                        </li>
+                        <li id="items_amounts">
+                            <div class="amounts-content">
+                                <div class="amounts-inner">
+                                    <a href="#" class="Minus">-</a>
+                                    <input type="text" value="1" class="text-amount" data-max="99999999" data-now="1" autocomplete="off">
+                                    <a href="#" class="Plus">+</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li id="items_sum-number">
+                            <div class="sum-number-content">
+                                <span>￥</span>
+                                <span id="prices">25.6</span>
+                            </div>
+                        </li>
+                        <li id="items_handle">
+                            <a href="#"><div class="handle_fav">移入收藏夹</div></a>
+                            <a href="#"><div class="handle_del">删除</div></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <footer>
+        <div class="footer-left">
+            <div class="footer-selector">
+                <input type="checkbox" class="foot_sel">
+                全选
+            </div>
+            <div class="footer-delete">
+                <a href="#">删除</a>
+            </div>
+            <div class="footer-collect">
+                <a href="#">移入收藏夹</a>
+            </div>
+        </div>
+
+        <div class="footer-right">
+            <div class="container">
+                <span class="pay-text">已选商品&nbsp;&nbsp;</span>
+                <span class="item-number">0</span>
+                <span class="pay-text">&nbsp;&nbsp;件</span>
+                <span class="iconfont"></span>
+            </div>
+            <span class="pay-text">&nbsp;&nbsp;&nbsp;&nbsp;合计（不含运费）：</span>
+            <span class="sum_prices">0.00</span>
+            <input type="submit" value="结算" class="submit_btn">
+        </div>
+    </footer>
+</body>
+</html>
