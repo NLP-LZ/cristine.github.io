@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="css/taobaoCar_main.css" type="text/css" media="all">
     <link rel="stylesheet" href="css/taobaoCar_footer.css" type="text/css" media="all">
     <link rel="stylesheet" href="./font/iconfont.css" type="text/css" media="all" />
-    <script src="./js/taobaoCar.js" type="text/javascript"></script>
 </head>
 <body>
     <header>
@@ -160,11 +159,14 @@
             </a>
         </div>
     </aside>
+    <aside class="add_btn">
+        <button class="btn-default" type="button">添加商品</button>
+    </aside>
 
     <main>
         <!--主体标题栏-->
         <div id="main_title" class="tb_main_title">
-            <span class="shop_name">购物车（全部1）</span>
+            <span class="shop_name">购物车（全部0）</span>
             <div class="cart-sum">
                 <span class="pay-text">已选商品（不含运费）</span>
                 <strong class="price"><span class="sum_prices">0.00</span></strong>
@@ -199,11 +201,13 @@
         <!--主体商品信息-->
         <div id="main_content" class="tb_main_content">
             <!--主体商品信息-->
-            <div id="main_content_items" class="tb_main_content_items">
+            <!-- 添加了hidden属性，元素会直接隐藏掉 -->
+            <div id="main_content_items" class="tb_main_content_items" hidden>
                 <div class="items_title">
                     <input type="checkbox" id="shop_select">
                     <label for="shop_select"></label>
-                    <span id="shop">店铺：</span><span id="shop_name">xxxix</span>
+                    <span id="shop">店铺：(死数据)</span>
+                    <span id="shop_name">古风衣装</span>
                 </div>
                 <div class="items_content">
                     <ul class="items_inner">
@@ -233,8 +237,14 @@
                         </li>
                         <li id="items_prices">
                             <div class="prices-content">
-                                <div class="prices-old"><span>￥</span><em>49</em></div>
-                                <div class="prices-new"><span>￥</span><em>25.6</em></div>
+                                <div class="prices-old">
+                                    <span>￥</span>
+                                    <em>49</em>
+                                </div>
+                                <div class="prices-new">
+                                    <span>￥</span>
+                                    <em>25.6</em>
+                                </div>
                             </div>
                         </li>
                         <li id="items_amounts">
@@ -288,5 +298,8 @@
             <input type="submit" value="结算" class="submit_btn">
         </div>
     </footer>
+    <script src="js/taobaoCar_header.js" type="text/javascript"></script>
+    <script src="js/taobaoCar_main.js" type="text/javascript"></script>
+    <script src="js/taobaoCar_footer.js" type="text/javascript"></script>
 </body>
 </html>
