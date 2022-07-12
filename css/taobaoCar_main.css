@@ -1,4 +1,4 @@
-aside{
+.sidebar{
     position: fixed;
     top: 50%;
     transform: translateY(-50%);
@@ -12,32 +12,32 @@ aside{
     border-bottom-left-radius: 25px;
 }
 
-aside img{
+.sidebar img{
     display: block;
     margin: 0 auto;
 }
-aside a{
+.sidebar a{
     font-size: 12px;
     color: black;
 }
-aside .cellphone{
+.sidebar .cellphone{
     width: 50px;
     height: 50px;
     padding-bottom: 15px;
 }
 
-aside .cellphone:hover .side_QRcode{
+.sidebar .cellphone:hover .side_QRcode{
     display: block;
 }
 
-aside .cellphone{
+.sidebar .cellphone{
     width: 50px;
     height: 50px;
     margin: 0 auto;
     padding-top: 15px;
 }
 
-aside .cellphone .side_QRcode{
+.sidebar .cellphone .side_QRcode{
     position: fixed;
     top: 50%;
     transform: translateY(-50%);
@@ -51,6 +51,27 @@ aside .cellphone .side_QRcode{
     display: none;
 }
 
+.add_btn{
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    width: 150px;
+    height: 150px;
+}
+
+.add_btn .btn-default{
+    width: 50px;
+    height: 150px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    background-color: #FF4400;
+    border: none;
+    color: white;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
 /*主体盒子*/
 main{
     width: 1190px;
@@ -61,6 +82,7 @@ main{
 /*主体-购物车标题栏*/
 main .tb_main_title{
     position: relative;
+    z-index: -1;
     height: 72px;
     line-height: 72px;
     background-color: white;
@@ -150,7 +172,7 @@ main .tb_main_title .cart-sum input{
 /*主体内容盒子*/
 .tb_main_content{
     /*height: 3000px;*/
-    padding-bottom: 30px;
+    padding-bottom: 75px;
     /*可以用js获取当前视口高度，使其成为最小高度*/
     min-height: 600px;
     background-color: white;

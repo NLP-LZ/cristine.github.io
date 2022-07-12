@@ -212,12 +212,26 @@ header .tb_header .tb_header_inner{
 }
 .tb_header .tb_header_inner .search .search-triggers:hover ul li:first-child{
     border-bottom-left-radius: 0;
+    border-right: 1px solid #F5F5F5;
 }
-.tb_header .tb_header_inner .search .search-triggers:hover ul li:not(:first-child){
-    display: block;
-}
-.tb_header .tb_header_inner .search .search-triggers ul{
 
+
+.tb_header .tb_header_inner .search .search-triggers:hover ul li:nth-child(2){
+    display: block;
+    width: 102px;
+    border-left: 1px solid #F5F5F5;
+    border-right: 1px solid #F5F5F5;
+}
+
+.tb_header .tb_header_inner .search .search-triggers:hover ul li:nth-child(3){
+    display: block;
+    width: 102px;
+    border: 1px solid #F5F5F5;
+    border-top: none;
+}
+
+.tb_header .tb_header_inner .search .search-triggers ul{
+    position: relative;
 }
 .tb_header .tb_header_inner .search .search-triggers ul li{
     list-style: none;
